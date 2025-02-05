@@ -74,10 +74,12 @@ header {
 
 .bookmark-logo {
   width: 8.5em;
+  cursor: pointer;
 }
 
 .nav-menu-btn {
   width: 1.5em;
+  cursor: pointer;
 }
 
 /* Make sure you STYLE HAMBURGER MENU LATER */
@@ -118,6 +120,7 @@ header {
   padding: 1.5em 0em;
   border-bottom: 1px solid #ffffffe4;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 #hamburger-menu-login-btn {
@@ -128,6 +131,7 @@ header {
   border: 1px solid #fff;
   background-color: hwb(228 15% 73% / 0.952);
   font-size: 1.15rem;
+  cursor: pointer;
 }
 
 .nav-socials {
@@ -136,6 +140,7 @@ header {
   justify-content: center;
   gap: 3em;
   margin-top: 80%;
+  cursor: pointer;
 }
 
 /* 3. HERO SECTION  */
@@ -237,6 +242,10 @@ header {
 
 .tab-nav:nth-child(1) {
   border-top: 1px solid hsl(220, 23%, 87%);
+}
+
+.tab-nav:hover {
+  color: hsl(0, 94%, 66%);
 }
 
 /* I used the psuedo selector ":nth-child()" which selects an element according to its position among its siblings */
@@ -373,6 +382,12 @@ header {
   width: 80%;
 }
 
+.blue-button:hover {
+  background-color: #fff;
+  color: hsl(231, 69%, 60%);
+  border: hsl(231, 69%, 60%) 2px solid;
+}
+
 /* FAQ SECTION */
 
 .faq-section {
@@ -403,7 +418,13 @@ header {
   border-bottom: 1px solid hsl(220, 23%, 87%);
   padding: 1em 0em;
   width: 100%;
+  cursor: pointer;
 }
+
+.question-tile:hover .question {
+  color: hsl(0, 94%, 66%);
+}
+
 .question {
   display: flex;
   justify-content: space-between;
