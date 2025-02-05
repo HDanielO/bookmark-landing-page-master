@@ -76,11 +76,13 @@ const handleEmailValidation = () => {
     errorIconElm.classList.remove("displayNone");
     inputBoxLayoutElm.classList.add("input-box-layot-err");
     inputLayoutElm.classList.add("input-layout-err");
+    emailSubButtonElm.setAttribute("disabled");
   } else {
     errorMessageElm.classList.add("displayNone");
     errorIconElm.classList.add("displayNone");
     inputBoxLayoutElm.classList.remove("input-box-layot-err");
     inputLayoutElm.classList.remove("input-layout-err");
+    emailSubButtonElm.removeAttribute("disabled");
   }
   // else {
   //   feedbackElement.textContent = "Please enter a valid email address.";
