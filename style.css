@@ -1,0 +1,933 @@
+/* STYLING */
+
+/* 1. General styling */
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+:root {
+  --shadow-color: 0deg 0% 63%;
+
+  --shadow-color-2: 0deg 0% 0%;
+
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+
+  --shadow-allsides-medium: 0px 0.3px 0.5px hsl(var(--shadow-color-2) / 0),
+    -0.1px 1.4px 2.1px hsl(var(--shadow-color-2) / 0.04),
+    -0.2px 2.8px 4.2px hsl(var(--shadow-color-2) / 0.07),
+    -0.5px 5.7px 8.6px hsl(var(--shadow-color-2) / 0.11);
+
+  --grey-txt-color: hsl(229, 8%, 60%);
+
+  --dark-blue-txt-color: hsl(229, 31%, 21%);
+
+  --bold-font: 500;
+
+  --light-font: 400;
+}
+
+.section-header {
+  color: var(--dark-blue-txt-color);
+  font-weight: var(--bold-font);
+}
+
+.section-description {
+  color: var(--grey-txt-color);
+  font-weight: var(--light-font);
+  width: 85%;
+  font-size: 1rem;
+  line-height: 1.7em;
+}
+
+button {
+  border: none;
+  background-color: hsl(0, 0%, 93%);
+  border-radius: 0.4em;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: var(--bold-font);
+}
+
+/* 2. Header & Nav section */
+header {
+  padding: 2em;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 3;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bookmark-logo {
+  width: 8.5em;
+}
+
+.nav-menu-btn {
+  width: 1.5em;
+}
+
+/* Make sure you STYLE HAMBURGER MENU LATER */
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 3em;
+  max-width: 100%;
+  height: 100vh;
+  padding: 2em;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: hwb(228 15% 73% / 0.952);
+}
+
+.ham-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger-navs {
+  list-style: none;
+}
+
+.hamburger-navs li:nth-child(1) {
+  border-top: 1px solid #ffffffe4;
+}
+
+.hamburger-navs li {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5em 0em;
+  border-bottom: 1px solid #ffffffe4;
+  font-size: 1.25rem;
+}
+
+#hamburger-menu-login-btn {
+  padding: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #fff;
+  background-color: hwb(228 15% 73% / 0.952);
+  font-size: 1.15rem;
+}
+
+.nav-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  margin-top: 80%;
+}
+
+/* 3. HERO SECTION  */
+
+.hero-section {
+  margin-top: 7em;
+}
+
+.hero-sec-img {
+  text-align: center;
+  margin-bottom: 4em;
+  position: relative;
+}
+
+.blue-curved-background {
+  background-color: hsl(231, 69%, 60%);
+  width: 70%;
+  height: 70%;
+  z-index: -1;
+  margin: 0;
+  position: absolute;
+}
+
+.bg-blue-1 {
+  top: 25%;
+  border-bottom-left-radius: 25%;
+  right: 0;
+}
+
+#hero-image {
+  width: 95%;
+}
+
+.hero-sec-txt {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+}
+
+.hero-sec-txt > .section-header {
+  font-size: 1.85rem;
+  width: 80%;
+}
+
+.hero-section-btns {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 1em;
+  width: 90%;
+}
+
+.hero-section-btns > button {
+  width: 45%;
+  padding: 1.25em;
+  color: hsl(229, 31%, 21%);
+}
+
+.hero-section-btns > .blue-button {
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+}
+
+/* 4. SECTION 2 */
+
+.section-2 {
+  margin: 7em 0 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  align-items: center;
+}
+
+.section-2 > .section-header {
+  font-size: 1.5rem;
+}
+
+.tab-nav-list {
+  margin-top: 0.5em;
+  display: flex;
+  list-style: none;
+  width: 80%;
+  flex-direction: column;
+  color: var(--grey-txt-color);
+}
+
+.tab-nav {
+  padding: 0.85em;
+  border-bottom: 1px solid hsl(220, 23%, 87%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.tab-nav:nth-child(1) {
+  border-top: 1px solid hsl(220, 23%, 87%);
+}
+
+/* I used the psuedo selector ":nth-child()" which selects an element according to its position among its siblings */
+
+.redline {
+  width: 50%;
+  height: 3px;
+  background-color: red;
+  position: absolute;
+  top: 94%;
+  z-index: 2;
+  display: none;
+}
+
+/* Add a hover interaction to the red line */
+
+.active-tab-nav {
+  color: #000000;
+}
+
+.active-tab-nav > .redline {
+  display: block;
+}
+
+/* 5. Tab Sections */
+
+/* 5a. Tab section 1 */
+
+.tab-section {
+  display: none;
+}
+
+/* remember we are only styling the active tab */
+
+.active-tab-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7em;
+  gap: 2em;
+}
+.tab-section-img {
+  text-align: center;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.tab-section-img > img {
+  max-width: 70%;
+}
+
+.bg-blue-2 {
+  top: 40%;
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 30%;
+  left: 0;
+}
+
+.tab-section-txt {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.tab-section-txt > .section-header {
+  font-size: 1.5rem;
+}
+
+.tab-section-txt > button {
+  display: none;
+}
+
+/* No more info button in the mobile view */
+
+/* style more info section in desktop view */
+
+/* 6. SECTION 3 */
+
+.section-3 {
+  margin: 2em 0 5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+  align-items: center;
+}
+
+/* 7. SECTION 4 */
+
+.section-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin: 5em 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  width: 70%;
+  box-shadow: var(--shadow-allsides-medium);
+  padding: 1em 0;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.box img {
+  width: 5em;
+  margin: 1.5em 0;
+}
+
+.box h3 {
+  color: var(--dark-blue-txt-color);
+  font-weight: var(--bold-font);
+}
+
+.box p {
+  color: var(--grey-txt-color);
+  font-size: 0.9rem;
+}
+
+.box .line {
+  width: 100%;
+}
+
+.blue-button {
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  padding: 1em;
+  width: 80%;
+}
+
+/* FAQ SECTION */
+
+.faq-section {
+  margin: 5em 0em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.faq-section .section-header {
+  width: 70%;
+}
+.faq-section .section-description {
+  width: 80%;
+}
+
+.accordion {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+}
+
+.question-tile {
+  border-bottom: 1px solid hsl(220, 23%, 87%);
+  padding: 1em 0em;
+  width: 100%;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  gap: 0.75em;
+}
+
+.question p {
+  text-align: left;
+}
+
+.answer {
+  text-align: left;
+  color: var(--grey-txt-color);
+  line-height: 1.75em;
+  font-size: 1rem;
+  margin-top: 1em;
+  display: none;
+}
+
+.open-accordion-icon {
+  display: block;
+}
+.close-accordion-icon {
+  display: none;
+  rotate: 180deg;
+}
+
+.faq-section .blue-button {
+  width: 9em;
+  margin-top: 1em;
+}
+
+/* CONTACT US SECTION */
+
+.contact-us-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: hsl(231, 69%, 60%);
+  color: #ffffff;
+  gap: 1em;
+  padding: 4em 1em;
+  align-items: center;
+}
+
+#number-joined {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.25rem;
+}
+
+#bd-txt {
+  font-size: 1.8rem;
+  font-weight: var(--bold-font);
+  width: 100%;
+}
+
+.form-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.input-box-layot {
+  width: 95%;
+  border-radius: 0.45em;
+}
+
+.input-box-layot-err {
+  background-color: hsl(0, 94%, 66%);
+}
+
+.input-layout {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 0.45em;
+  align-items: center;
+  padding: 0.2em 1em;
+  box-sizing: border-box;
+}
+
+.input-layout-err {
+  border: hsl(0, 94%, 66%) 3px solid;
+}
+
+.input-layout img {
+  width: 2em;
+  height: 2em;
+}
+
+#email-input {
+  width: 90%;
+  padding: 1em;
+  border-radius: 0.45em;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#email-input:focus {
+  border: none;
+  outline: none;
+}
+
+/* CHANGE STYLE OF INPUT FORM WHEN AUTOFILLING */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.error {
+  background-color: hsl(0, 94%, 66%);
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 0.7em;
+  font-size: 0.8rem;
+  border-bottom-left-radius: 0.45em;
+  border-bottom-right-radius: 0.45em;
+}
+
+#email-sub-btn {
+  width: 95%;
+  padding: 1em;
+  border-radius: 0.45em;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: #ffffff;
+  background-color: hsl(0, 94%, 66%);
+}
+
+#email-sub-btn:hover {
+  background-color: #ffff;
+  color: hsl(0, 94%, 66%);
+  border: 2px solid hsl(0, 94%, 66%);
+}
+
+/* FOOTER */
+footer {
+  background-color: hsl(229, 31%, 21%);
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.footer-link-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.footer-links a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-socials {
+  list-style: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 2.5em;
+}
+
+.footer-socials img {
+  width: 2em;
+}
+
+/* TO DO LIST NEXT TIME */
+
+/* STYLE FOR TAB */
+/* STYLE FOR DESKTOP */
+/* REDUCE REDUNDANT STYLES */
+
+/* TAB STYLING */
+
+@media only screen and (min-width: 768px) {
+  .bg-blue-1 {
+    width: 70%;
+    top: 25%;
+    height: 70%;
+  }
+
+  .tab-nav-list {
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2em;
+    border-bottom: 1px solid hsl(220, 23%, 87%);
+    align-items: center;
+  }
+
+  .tab-nav {
+    border-bottom: none;
+  }
+
+  .tab-nav:nth-child(1) {
+    border-top: none;
+  }
+
+  .redline {
+    width: 110%;
+  }
+
+  .active-tab-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0em;
+    margin-top: 2em;
+    gap: 3em;
+    padding: 0em 4em;
+    position: relative;
+  }
+
+  .tab-section-img {
+    text-align: left;
+    margin-bottom: 0em;
+    position: unset;
+    width: 60%;
+  }
+
+  .tab-section-img > img {
+    max-width: 100%;
+  }
+
+  .tab-section-txt {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: baseline;
+    width: 60%;
+  }
+
+  .tab-section-txt .section-description {
+    width: 100%;
+  }
+
+  .tab-section-txt > button {
+    display: block;
+    width: 30%;
+  }
+
+  .bg-blue-2 {
+    width: 40%;
+    height: 80%;
+    border-bottom-right-radius: 30%;
+    border-top-right-radius: 90%;
+    top: 25%;
+  }
+
+  .tab-section-1 .bg-blue-2 {
+    top: 30%;
+  }
+
+  .section-3 {
+    margin-top: 6em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 6em;
+  }
+
+  .bookmark-logo {
+    width: 8.5em;
+    cursor: pointer;
+  }
+
+  .nav-menu-btn {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    max-width: auto;
+    height: auto;
+    padding: 0em;
+    z-index: 1;
+    position: unset;
+    background-color: #fff;
+  }
+
+  .ham-header {
+    display: none;
+  }
+
+  .hamburger-navs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+  }
+
+  .hamburger-navs li {
+    color: hsl(229, 31%, 21%);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0em;
+    border: none;
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+
+  #hamburger-menu-login-btn {
+    padding: 0.75em;
+    border: none;
+    background-color: hsl(0, 94%, 66%);
+    font-size: 0.75rem;
+    width: 7.5em;
+  }
+
+  .nav-socials {
+    display: none;
+  }
+
+  /* 3. HERO SECTION  */
+
+  .hero-section {
+    margin-top: 7em;
+    display: flex;
+    padding: 0em 6em;
+    position: relative;
+  }
+
+  .hero-sec-img {
+    text-align: left;
+    margin-bottom: 4em;
+    position: unset;
+    order: 2;
+  }
+
+  #hero-image {
+    width: 115%;
+  }
+
+  .bg-blue-1 {
+    top: 25%;
+    border-bottom-left-radius: 30%;
+    right: 0;
+    width: 30%;
+    height: 60%;
+  }
+
+  .hero-sec-txt {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .hero-sec-txt .section-header {
+    font-size: 1.85rem;
+    width: 50%;
+  }
+
+  .hero-sec-txt .section-description {
+    width: 65%;
+  }
+
+  .hero-section-btns {
+    justify-content: flex-start;
+    gap: 2em;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .hero-section-btns > button {
+    width: 20%;
+    padding: 1em;
+  }
+
+  /* SECTION 2 */
+
+  .section-2 > .section-description {
+    width: 35%;
+  }
+
+  .active-tab-section {
+    padding: 0em 6em;
+  }
+
+  .active-tab-section .blue-button {
+    width: 20%;
+  }
+
+  /* SECTION 3 */
+
+  .section-3 > .section-description {
+    width: 40%;
+  }
+
+  /* SECTION 4 */
+
+  .section-4 {
+    flex-direction: row;
+    padding: 0em 12em;
+    height: calc(25em);
+    align-items: center;
+  }
+
+  .box:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  .box:nth-child(3) {
+    align-self: flex-end;
+  }
+
+  /* FAQ SECTION */
+  .faq-section > .section-description {
+    width: 35%;
+  }
+
+  .accordion {
+    width: 45%;
+  }
+
+  /* CONTACT US SECTION */
+  .contact-us-section {
+    padding: 4em 20em;
+  }
+
+  #bd-txt {
+    width: 60%;
+  }
+
+  .form-layout {
+    flex-direction: row;
+    width: 80%;
+  }
+
+  #email-input {
+    width: 90%;
+  }
+
+  #email-sub-btn {
+    width: 40%;
+    align-self: flex-start;
+    height: 3.85rem;
+  }
+
+  /* FOOTER */
+
+  footer {
+    padding: 1.5em 6em;
+  }
+
+  .footer-layout {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-link-layout,
+  .footer-links {
+    flex-direction: row;
+  }
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
